@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Development - Schbits</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .game-project-card:hover {
+            transform: translateY(-6px) scale(1.02);
+            box-shadow: 0 15px 25px -5px rgba(167, 139, 250, 0.2), 0 8px 10px -6px rgba(167, 139, 250, 0.15); /* Adjusted shadow for dark theme cards */
+        }
+        .cta-button {
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .cta-button:hover {
+            transform: translateY(-2px);
+        }
+         html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-slate-900 text-slate-200 font-sans antialiased">
+
+    <header class="bg-slate-800 shadow-lg sticky top-0 z-50"> <nav class="container mx-auto px-6 py-5 flex justify-between items-center">
+            <a href="index.html" class="text-3xl font-bold text-purple-400 hover:text-purple-300 transition-colors">Schbits</a> <div>
+                <a href="corporate-solutions.html" class="text-slate-300 hover:text-blue-400 px-4 py-2 transition-colors font-medium">Corporate Solutions</a>
+                <a href="apps.html" class="text-slate-300 hover:text-green-400 px-4 py-2 transition-colors font-medium">Apps</a>
+                <a href="games.html" class="text-purple-400 font-semibold px-4 py-2">Games</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="bg-gradient-to-br from-purple-700 via-indigo-800 to-slate-900 text-white py-24 lg:py-32 relative overflow-hidden">
+        <div class="absolute inset-0 bg-black opacity-40"></div> <div class="container mx-auto px-6 text-center relative z-10">
+            <h1 class="text-4xl lg:text-6xl font-bold mb-6 tracking-tight">Crafting Worlds. Telling Stories.</h1>
+            <p class="text-lg lg:text-2xl text-purple-200 max-w-3xl mx-auto leading-relaxed">
+                Our passion is to develop engaging and memorable games. Explore the projects we're forging and join our journey!
+            </p>
+        </div>
+    </section>
+
+    <main class="container mx-auto px-6 py-12 lg:py-16">
+
+        <section id="game-vision" class="mb-16 lg:mb-24 text-center">
+            <h2 class="text-3xl lg:text-4xl font-semibold text-purple-300 mb-4">Our Creative Approach</h2>
+            <p class="text-lg text-slate-400 mb-10 lg:mb-12 max-w-3xl mx-auto">
+                We believe the best games are born from a combination of innovative gameplay, captivating narratives, and profound attention to detail.
+            </p>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-slate-800 p-8 rounded-xl shadow-xl border border-slate-700 hover:border-purple-500 transition-colors">
+                    <svg class="w-16 h-16 text-purple-400 mx-auto mb-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M14.25 6.087c0-.595-.484-1.087-1.088-1.087h-.002a1.088 1.088 0 00-1.087 1.087V18c0 .596.484 1.087 1.088 1.087h.002c.603 0 1.087-.49 1.087-1.087V6.087zM9.75 12c0-.596-.484-1.087-1.088-1.087H8.66c-.603 0-1.087.49-1.087 1.087V18c0 .596.484 1.087 1.088 1.087h.002c.603 0 1.087-.49 1.087-1.087V12zM5.25 12c0-.596-.484-1.087-1.088-1.087H4.16c-.603 0-1.087.49-1.087 1.087V18c0 .596.484 1.087 1.088 1.087h.002c.603 0 1.087-.49 1.087-1.087V12zM18.75 10.182a.807.807 0 00-1.5.046V18c0 .596.484 1.087 1.088 1.087h.002c.603 0 1.087-.49 1.087-1.087V10.228a.807.807 0 00-.678-.802V6.087a2.25 2.25 0 10-4.5 0v3.75" />
+                    </svg>
+                    <h3 class="text-2xl font-semibold text-purple-300 mb-3">Innovative Gameplay</h3>
+                    <p class="text-slate-400 leading-relaxed">We seek unique mechanics that challenge and reward players.</p>
+                </div>
+                <div class="bg-slate-800 p-8 rounded-xl shadow-xl border border-slate-700 hover:border-purple-500 transition-colors">
+                     <svg class="w-16 h-16 text-purple-400 mx-auto mb-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.375 19.5h17.25m-17.25 0a1.125 1.125 0 01-1.125-1.125M3.375 19.5V7.5M10.5 19.5V7.5m0 0a3 3 0 013-3h3.75m-3.75 0V4.5m0 3V12m6.75 7.5v-1.518A2.25 2.25 0 0016.5 13.5H15V7.5m0 0V4.5m0 3H12m0 0V4.5m6.75 15v-2.25A2.25 2.25 0 0018 15a2.25 2.25 0 00-2.25-2.25H15m1.5 4.5V7.5" />
+                    </svg>
+                    <h3 class="text-2xl font-semibold text-purple-300 mb-3">Immersive Narratives</h3>
+                    <p class="text-slate-400 leading-relaxed">We create stories and universes that capture the imagination.</p>
+                </div>
+                <div class="bg-slate-800 p-8 rounded-xl shadow-xl border border-slate-700 hover:border-purple-500 transition-colors">
+                    <svg class="w-16 h-16 text-purple-400 mx-auto mb-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                    </svg>
+                    <h3 class="text-2xl font-semibold text-purple-300 mb-3">Passion for Artistry</h3>
+                    <p class="text-slate-400 leading-relaxed">Every pixel, sound, and animation is crafted with care and dedication.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="in-development" class="mb-16 lg:mb-24">
+            <h2 class="text-3xl lg:text-4xl font-semibold text-purple-300 mb-10 lg:mb-12 text-center">Our Current Projects</h2>
+
+            <div class="grid md:grid-cols-2 gap-10 lg:gap-12">
+                <div class="bg-slate-800 rounded-xl shadow-2xl overflow-hidden game-project-card transition-all duration-300 border border-slate-700">
+                    <img src="https://via.placeholder.com/600x350/6d28d9/c4b5fd?text=Project+Alpha+-+Concept" alt="Project Alpha Concept Art" class="w-full h-64 object-cover">
+                    <div class="p-6 md:p-8">
+                        <span class="inline-block bg-indigo-500 text-indigo-100 text-xs font-semibold px-2.5 py-0.5 rounded-full mb-3">Adventure RPG</span>
+                        <h3 class="text-2xl lg:text-3xl font-bold text-white mb-3">Project Alpha (Working Title)</h3>
+                        <p class="text-slate-400 mb-4 leading-relaxed">
+                            Dive into a dark fantasy world, unravel ancient mysteries, and confront fearsome creatures. Features tactical combat and a deep narrative.
+                        </p>
+                        <p class="text-sm text-purple-400 font-semibold">Status: <span class="text-slate-300">Early Development / Prototyping</span></p>
+                    </div>
+                </div>
+
+                <div class="bg-slate-800 rounded-xl shadow-2xl overflow-hidden game-project-card transition-all duration-300 border border-slate-700">
+                     <img src="https://via.placeholder.com/600x350/7c3aed/ddd6fe?text=Project+Beta+-+Mockup" alt="Project Beta Gameplay Mockup" class="w-full h-64 object-cover">
+                    <div class="p-6 md:p-8">
+                        <span class="inline-block bg-pink-500 text-pink-100 text-xs font-semibold px-2.5 py-0.5 rounded-full mb-3">Casual Mobile Puzzle</span>
+                        <h3 class="text-2xl lg:text-3xl font-bold text-white mb-3">Project Beta (Working Title)</h3>
+                        <p class="text-slate-400 mb-4 leading-relaxed">
+                            An addictive puzzle game with intuitive mechanics and a charming visual design. Perfect for quick sessions of fun and challenge.
+                        </p>
+                        <p class="text-sm text-purple-400 font-semibold">Status: <span class="text-slate-300">Playable Prototype / Design Iteration</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12 lg:mt-16">
+                 <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-slate-700 mb-4">
+                    <svg class="w-8 h-8 text-purple-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 3v1.5M4.5 8.25H3M16.5 3v1.5M20.25 8.25H21M12 2.25v19.5M12 2.25c-2.485 0-4.5 2.015-4.5 4.5S9.515 11.25 12 11.25s4.5-2.015 4.5-4.5S14.485 2.25 12 2.25zM12 12.75c2.485 0 4.5 2.015 4.5 4.5S14.485 21.75 12 21.75s-4.5-2.015-4.5-4.5S9.515 12.75 12 12.75z" />
+                    </svg>
+                </div>
+                <h3 class="text-2xl font-semibold text-purple-300 mb-2">And Many More to Come!</h3>
+                <p class="text-slate-400 max-w-md mx-auto">Our team is always bubbling with new ideas. Stay tuned for more exciting announcements.</p>
+            </div>
+        </section>
+
+        <section id="stay-tuned" class="bg-gradient-to-r from-purple-800 via-indigo-900 to-slate-900 text-white py-16 lg:py-20 rounded-xl shadow-2xl border border-slate-700">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl lg:text-4xl font-bold mb-6">Join Our Community & Follow Our Journey!</h2>
+                <p class="text-lg lg:text-xl text-purple-200 mb-8 max-w-2xl mx-auto">
+                    Follow us on social media (if available) or check back soon for the latest news on our games.
+                </p>
+                <a href="mailto:contact@schbits.com?subject=Inquiry%20about%20Games"
+                   class="bg-purple-500 hover:bg-purple-400 text-white font-bold py-4 px-8 rounded-lg text-lg cta-button shadow-lg">
+                    Talk to Us About Games
+                </a>
+            </div>
+        </section>
+
+         <div class="mt-16 text-center">
+            <a href="index.html" class="text-purple-400 hover:text-purple-300 font-semibold transition-colors duration-300">
+                &larr; Back to Homepage
+            </a>
+        </div>
+    </main>
+
+    <footer class="bg-slate-900 border-t border-slate-700 text-slate-400 py-12 mt-12">
+        <div class="container mx-auto px-6 text-center">
+            <p class="mb-2">&copy; <span id="currentYear"></span> Schbits. All rights reserved.</p>
+            <p class="text-sm">Level Up Your Imagination.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+
+</body>
+</html>
