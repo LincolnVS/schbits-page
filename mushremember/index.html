@@ -36,10 +36,10 @@
     .store-badge .sb-big { font-size:1.05rem; font-weight:700; line-height:1.15; display:block; }
     .store-badge[aria-disabled="true"] { opacity:.55; pointer-events:none; }
 
-    /* faixa de telas */
-    .shots-row { display:flex; gap:22px; overflow-x:auto; padding:6px 0 18px; scroll-snap-type:x mandatory; }
-    .shot { flex:none; scroll-snap-align:center; width:236px; }
-    .shot img { width:100%; border-radius:26px; border:1px solid var(--line); box-shadow: var(--shadow); display:block; }
+    /* galeria de telas: centraliza e quebra linha, sem scroll horizontal */
+    .shots-row { display:flex; flex-wrap:wrap; justify-content:center; gap:20px 22px; padding:6px 0; }
+    .shot { flex:0 0 auto; width:184px; }
+    .shot img { width:100%; border-radius:24px; border:1px solid var(--line); box-shadow: var(--shadow); display:block; }
     .shot span { display:block; text-align:center; margin-top:12px; color:var(--meta); font-size:.86rem; font-weight:600; }
 
     .mush-band { background: var(--surface); border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
