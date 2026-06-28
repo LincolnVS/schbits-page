@@ -1,160 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Schbits - Engineering Your Digital Future</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        .hero-content > * {
-            animation: fadeInDown 0.8s ease-out forwards;
-        }
-        .hero-content h1 { animation-delay: 0.2s; }
-        .hero-content p { animation-delay: 0.4s; }
-        .hero-content a { animation-delay: 0.6s; }
-
-        .card-base {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .card-base:hover {
-            transform: translateY(-8px); /* Slightly more lift */
-        }
-
-        .card-games-home:hover {
-             box-shadow: 0 12px 25px -5px rgba(129, 140, 248, 0.4), 0 6px 12px -6px rgba(129, 140, 248, 0.3); /* Adjusted for Indigo/Purple */
-        }
-        .card-corp-home:hover {
-            box-shadow: 0 12px 20px -5px rgba(59, 130, 246, 0.25), 0 6px 10px -6px rgba(59, 130, 246, 0.15);
-        }
-        .card-apps-home:hover {
-             box-shadow: 0 12px 20px -5px rgba(16, 185, 129, 0.25), 0 6px 10px -6px rgba(16, 185, 129, 0.15);
-        }
-        html {
-            scroll-behavior: smooth; /* Ensures smooth scroll for #links */
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Schbits — Apps that take care of your day</title>
+  <meta name="description" content="Schbits is an independent mobile app studio. We craft calm, privacy-first apps for Android and iOS. Meet Mush Remember." />
+  <link rel="icon" type="image/png" href="/assets/mushremember-icon.png" />
+  <!-- fixa o idioma antes da pintura (sem flash do idioma inativo) -->
+  <script>document.documentElement.setAttribute('data-active',(localStorage.getItem('lang')||((navigator.language||'en').toLowerCase().indexOf('pt')===0?'pt':'en')));</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/site.css" />
 </head>
-<body class="bg-slate-50 text-slate-800 font-sans antialiased">
+<body>
 
-    <header class="bg-white shadow-lg sticky top-0 z-50">
-        <nav class="container mx-auto px-6 py-5 flex justify-between items-center">
-            <a href="index.html" class="text-3xl font-bold text-slate-800 hover:text-blue-600 transition-colors">Schbits</a>
-            <div>
-                <a href="corporate-solutions.html" class="text-slate-600 hover:text-blue-500 px-4 py-2 transition-colors font-medium">Corporate Solutions</a>
-                <a href="apps.html" class="text-slate-600 hover:text-green-500 px-4 py-2 transition-colors font-medium">Apps</a>
-                <a href="games.html" class="text-slate-600 hover:text-purple-500 px-4 py-2 transition-colors font-medium">Games</a>
-            </div>
-        </nav>
-    </header>
-
-    <section class="bg-gradient-to-br from-slate-900 via-slate-800 to-gray-900 text-white min-h-[calc(100vh-76px)] flex items-center justify-center py-12 lg:py-0">
-        <div class="container mx-auto px-6 text-center hero-content">
-            <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold mb-6 !leading-tight">
-                <span class="block">Welcome to Schbits.</span>
-                <span class="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-sky-400 to-indigo-400 mt-2">
-                    We Engineer Your Digital Future.
-                </span>
-            </h1>
-            <p class="text-lg md:text-xl lg:text-2xl text-slate-300 max-w-3xl mx-auto mb-10">
-                At Schbits, we blend cutting-edge technology with creative vision to deliver bespoke data solutions, engaging applications, and immersive gaming experiences.
-            </p>
-            <a href="#our-expertise"
-                class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-4 px-10 rounded-lg text-xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
-                Discover Our Expertise
-            </a>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="/">
+        <img src="/assets/mushremember-icon.png" alt="Schbits" />
+        <b>Schbits</b>
+      </a>
+      <nav class="nav">
+        <a href="#apps"><span data-lang="pt">Apps</span><span data-lang="en">Apps</span></a>
+        <a href="/mushremember/"><span data-lang="pt">Mush Remember</span><span data-lang="en">Mush Remember</span></a>
+        <div class="lang" role="group" aria-label="Language">
+          <button data-set-lang="pt">PT</button>
+          <button data-set-lang="en">EN</button>
         </div>
-    </section>
+      </nav>
+    </div>
+  </header>
 
-    <section class="py-16 lg:py-24 bg-white">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl lg:text-4xl font-bold text-slate-700 mb-6">The Heart of Innovation at Schbits</h2>
-            <p class="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
-                Schbits was born from a passion for transformative technology. We are a dedicated team of thinkers, creators, and developers committed to pushing boundaries and crafting digital experiences that not only meet but exceed expectations. Your vision is our blueprint for innovation.
-            </p>
+  <!-- ------------------------------- Hero -------------------------------- -->
+  <section style="padding-top:84px;padding-bottom:40px">
+    <div class="wrap" style="display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center">
+      <div>
+        <span class="eyebrow" data-lang="pt">Estúdio de apps</span>
+        <span class="eyebrow" data-lang="en">Independent app studio</span>
+        <h1>
+          <span data-lang="pt">Apps que cuidam do seu dia.</span>
+          <span data-lang="en">Apps that take care of your day.</span>
+        </h1>
+        <p class="lead" data-lang="pt">A Schbits cria apps calmos e <b>privacidade em primeiro lugar</b> para Android e iOS. Nada de ruído, nada de rastreio — só software que ajuda de verdade.</p>
+        <p class="lead" data-lang="en">Schbits builds calm, <b>privacy-first</b> apps for Android and iOS. No noise, no tracking — just software that genuinely helps.</p>
+        <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:28px">
+          <a class="btn btn-primary" href="/mushremember/">
+            <span data-lang="pt">Conheça o Mush Remember</span>
+            <span data-lang="en">Meet Mush Remember</span>
+          </a>
+          <a class="btn btn-ghost" href="#apps">
+            <span data-lang="pt">Ver todos os apps</span>
+            <span data-lang="en">See all apps</span>
+          </a>
         </div>
-    </section>
-
-
-    <main id="our-expertise" class="container mx-auto px-6 py-16 lg:py-24">
-        <h2 class="text-3xl lg:text-4xl font-bold text-slate-700 text-center mb-12 lg:mb-16">Our Areas of Expertise</h2>
-
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
-
-            <div class="card-base card-corp-home bg-white rounded-xl shadow-xl hover:shadow-2xl overflow-hidden flex flex-col">
-                <div class="p-8 flex-grow">
-                    <div class="mb-6 inline-flex items-center justify-center w-20 h-20 rounded-full bg-blue-100">
-                        <svg class="w-12 h-12 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 13v-1m4 1v-3m4 3V8M5 21h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v14a2 2 0 002 2z"></path><path stroke-linecap="round" stroke-linejoin="round" d="M12 18h.01"></path></svg>
-                    </div>
-                    <h3 class="text-2xl font-semibold mb-4 text-blue-700">Corporate Data Solutions</h3>
-                    <p class="text-slate-600 leading-relaxed mb-5">
-                        We turn data into strategic assets with custom software, like our OPCAE Collector, and expert AI consulting.
-                    </p>
-                </div>
-                <div class="p-6 bg-slate-50 mt-auto">
-                    <a href="corporate-solutions.html" class="inline-block w-full text-center bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-5 rounded-lg transition-colors duration-300 shadow-md hover:shadow-lg">
-                        View Solutions
-                    </a>
-                </div>
-            </div>
-
-            <div class="card-base card-apps-home bg-white rounded-xl shadow-xl hover:shadow-2xl overflow-hidden flex flex-col">
-                <div class="p-8 flex-grow">
-                     <div class="mb-6 inline-flex items-center justify-center w-20 h-20 rounded-full bg-emerald-100">
-                         <svg class="w-12 h-12 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2zM12 5.25h.01M12 3v.01"></path></svg>
-                    </div>
-                    <h3 class="text-2xl font-semibold mb-4 text-emerald-700">Innovative Apps</h3>
-                    <p class="text-slate-600 leading-relaxed mb-5">
-                        Crafting intuitive and functional mobile experiences. Discover DreamWave, our app live on the Play Store!
-                    </p>
-                </div>
-                <div class="p-6 bg-slate-50 mt-auto">
-                    <a href="apps.html" class="inline-block w-full text-center bg-emerald-500 hover:bg-emerald-600 text-white font-semibold py-3 px-5 rounded-lg transition-colors duration-300 shadow-md hover:shadow-lg">
-                        Discover Apps
-                    </a>
-                </div>
-            </div>
-
-            <div class="card-base card-games-home bg-slate-800 rounded-xl shadow-xl hover:shadow-2xl overflow-hidden flex flex-col border border-slate-700">
-                <div class="p-8 flex-grow">
-                    <div class="mb-6 inline-flex items-center justify-center w-20 h-20 rounded-full bg-purple-500 bg-opacity-25">
-                        <svg class="w-12 h-12 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                    </div>
-                    <h3 class="text-2xl font-semibold mb-4 text-purple-300">Game Development</h3>
-                    <p class="text-slate-400 leading-relaxed mb-5">
-                        Our passion for gaming drives us. Exciting projects, like the RPG "Project Alpha," are currently in development.
-                    </p>
-                </div>
-                 <div class="p-6 bg-slate-800 border-t border-slate-700 mt-auto">
-                    <a href="games.html" class="inline-block w-full text-center bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-5 rounded-lg transition-colors duration-300 shadow-md hover:shadow-lg">
-                        Explore Games
-                    </a>
-                </div>
-            </div>
+      </div>
+      <div style="display:grid;place-items:center">
+        <div style="position:relative">
+          <div style="position:absolute;inset:-8% -8%;background:radial-gradient(circle at 50% 40%, color-mix(in srgb,var(--accent) 28%,transparent), transparent 70%);filter:blur(10px)"></div>
+          <img src="/assets/cogu.png" alt="Cogu, mascote do Mush Remember"
+               style="position:relative;width:min(320px,68vw);filter:drop-shadow(var(--shadow))" />
         </div>
-    </main>
+      </div>
+    </div>
+  </section>
 
-    <footer class="bg-slate-900 text-slate-400 py-12">
-        <div class="container mx-auto px-6 text-center">
-            <p class="mb-2">&copy; <span id="currentYear"></span> Schbits. All rights reserved.</p>
-            <p class="text-sm">Building tomorrow, today.</p>
+  <!-- ------------------------------- Valores ----------------------------- -->
+  <section style="padding-top:24px;padding-bottom:24px">
+    <div class="wrap">
+      <div class="grid grid-3">
+        <div class="card">
+          <div class="icon-chip" style="background:color-mix(in srgb,var(--accent) 16%,transparent)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3><span data-lang="pt">Privacidade em primeiro lugar</span><span data-lang="en">Privacy-first</span></h3>
+          <p style="color:var(--ink-soft);margin:0" data-lang="pt">Seus dados ficam no seu aparelho. Sem conta, sem rastreio, sem anúncios.</p>
+          <p style="color:var(--ink-soft);margin:0" data-lang="en">Your data stays on your device. No account, no tracking, no ads.</p>
         </div>
-    </footer>
+        <div class="card">
+          <div class="icon-chip" style="background:color-mix(in srgb,var(--coral) 18%,transparent)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="var(--coral)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.5 5 5.5.8-4 3.9.9 5.5L12 21l-4.9 2.6.9-5.5-4-3.9 5.5-.8z"/></svg>
+          </div>
+          <h3><span data-lang="pt">Design caprichado</span><span data-lang="en">Crafted design</span></h3>
+          <p style="color:var(--ink-soft);margin:0" data-lang="pt">Cada tela pensada com carinho — claro e escuro, hierarquia e detalhes.</p>
+          <p style="color:var(--ink-soft);margin:0" data-lang="en">Every screen thoughtfully made — light & dark, hierarchy and detail.</p>
+        </div>
+        <div class="card">
+          <div class="icon-chip" style="background:color-mix(in srgb,var(--success) 18%,transparent)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="var(--success)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4 12 14.01l-3-3"/></svg>
+          </div>
+          <h3><span data-lang="pt">Funciona offline</span><span data-lang="en">Works offline</span></h3>
+          <p style="color:var(--ink-soft);margin:0" data-lang="pt">Pensado para usar no dia a dia, com ou sem internet.</p>
+          <p style="color:var(--ink-soft);margin:0" data-lang="en">Built for everyday use, with or without a connection.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <script>
-        document.getElementById('currentYear').textContent = new Date().getFullYear();
-        // The smooth scroll for #our-expertise is now handled by `html { scroll-behavior: smooth; }`
-        // If you need more complex JS for other interactions, it can be added here.
-    </script>
+  <!-- ------------------------------- Apps -------------------------------- -->
+  <section id="apps">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow" data-lang="pt">Nossos apps</span>
+        <span class="eyebrow" data-lang="en">Our apps</span>
+        <h2><span data-lang="pt">Feitos para o dia a dia</span><span data-lang="en">Made for everyday life</span></h2>
+      </div>
 
+      <div class="grid grid-2">
+        <!-- Mush Remember (destaque) -->
+        <a href="/mushremember/" class="card" style="text-decoration:none;color:inherit;display:flex;gap:20px;align-items:flex-start">
+          <img src="/assets/mushremember-icon.png" alt="Mush Remember"
+               style="width:72px;height:72px;border-radius:18px;box-shadow:var(--shadow-sm);flex:none" />
+          <div>
+            <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+              <h3 style="margin:0">Mush Remember</h3>
+              <span style="font-size:.72rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--success);background:color-mix(in srgb,var(--success) 16%,transparent);padding:3px 9px;border-radius:999px" data-lang="pt">Disponível</span>
+              <span style="font-size:.72rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--success);background:color-mix(in srgb,var(--success) 16%,transparent);padding:3px 9px;border-radius:999px" data-lang="en">Available</span>
+            </div>
+            <p style="color:var(--ink-soft);margin:.5em 0 0" data-lang="pt">Seu assistente de agenda <b>proativo</b>: tarefas, hábitos e lembretes — com o Cogu cuidando do seu dia.</p>
+            <p style="color:var(--ink-soft);margin:.5em 0 0" data-lang="en">Your <b>proactive</b> schedule assistant: tasks, habits and reminders — with Cogu looking after your day.</p>
+            <span style="display:inline-block;margin-top:14px;font-weight:700;color:var(--accent-strong)" data-lang="pt">Saiba mais →</span>
+            <span style="display:inline-block;margin-top:14px;font-weight:700;color:var(--accent-strong)" data-lang="en">Learn more →</span>
+          </div>
+        </a>
+
+        <!-- Próximo app (placeholder) -->
+        <div class="card" style="display:flex;gap:20px;align-items:flex-start;opacity:.72">
+          <div style="width:72px;height:72px;border-radius:18px;flex:none;display:grid;place-items:center;background:var(--surface-2);border:1px dashed var(--line)">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="var(--meta)" stroke-width="1.8" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+          </div>
+          <div>
+            <h3 style="margin:0"><span data-lang="pt">Em breve</span><span data-lang="en">Coming soon</span></h3>
+            <p style="color:var(--ink-soft);margin:.5em 0 0" data-lang="pt">Estamos cozinhando o próximo. Fique de olho.</p>
+            <p style="color:var(--ink-soft);margin:.5em 0 0" data-lang="en">We're cooking the next one. Stay tuned.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <span>© <span id="yr"></span> Schbits · <span data-lang="pt">Construído com cuidado.</span><span data-lang="en">Built with care.</span></span>
+      <nav>
+        <a href="/mushremember/">Mush Remember</a>
+        <a href="/mushremember/privacy/"><span data-lang="pt">Privacidade</span><span data-lang="en">Privacy</span></a>
+        <a href="/mushremember/support/"><span data-lang="pt">Suporte</span><span data-lang="en">Support</span></a>
+        <a href="mailto:contato@schbits.com">contato@schbits.com</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+  <script src="/assets/i18n.js"></script>
 </body>
 </html>

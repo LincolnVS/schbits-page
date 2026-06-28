@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mush Remember — Support</title>
+  <meta name="description" content="Support for Mush Remember. Get help, report a problem or send feedback." />
+  <link rel="icon" type="image/png" href="/assets/mushremember-icon.png" />
+  <script>document.documentElement.setAttribute('data-active',(localStorage.getItem('lang')||((navigator.language||'en').toLowerCase().indexOf('pt')===0?'pt':'en')));</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/site.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="/"><img src="/assets/mushremember-icon.png" alt="Schbits" /><b>Schbits</b></a>
+      <nav class="nav">
+        <a href="/mushremember/"><span data-lang="pt">Mush Remember</span><span data-lang="en">Mush Remember</span></a>
+        <div class="lang" role="group" aria-label="Language">
+          <button data-set-lang="pt">PT</button>
+          <button data-set-lang="en">EN</button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+
+    <!-- ============================ PORTUGUÊS ============================ -->
+    <article class="doc" data-lang="pt">
+      <h1>Suporte</h1>
+      <p class="updated">Mush Remember · Schbits</p>
+      <p>Precisa de ajuda, encontrou um problema ou tem uma ideia? A gente lê tudo.</p>
+
+      <div class="card">
+        <h3 style="margin-top:0">Fale com a gente</h3>
+        <p style="margin:0">E-mail: <a href="mailto:contato@schbits.com?subject=Suporte%20Mush%20Remember">contato@schbits.com</a><br/>
+        Respondemos normalmente em até 2 dias úteis.</p>
+      </div>
+
+      <h2>Perguntas frequentes</h2>
+
+      <h3>Meus dados ficam salvos se eu trocar de celular?</h3>
+      <p>Os dados ficam no aparelho. Hoje o App é local-first e ainda não há sincronização em nuvem, então ao trocar de aparelho os dados não migram automaticamente. É um recurso planejado para o futuro.</p>
+
+      <h3>Não estou recebendo as notificações.</h3>
+      <p>Confira se as notificações do Mush Remember estão ativadas nos ajustes do sistema. Em alguns aparelhos Android, a economia de bateria pode atrasar lembretes — permitir que o App rode em segundo plano resolve.</p>
+
+      <h3>Por que alguns compromissos mostram o clima?</h3>
+      <p>O clima aparece só quando o compromisso envolve sair de casa e você preencheu um <b>local</b>. A previsão vem do Open-Meteo usando o nome do local — nunca o GPS do aparelho.</p>
+
+      <h3>O App é gratuito? Tem anúncios?</h3>
+      <p>Sem anúncios e sem rastreio. Veja a <a href="/mushremember/privacy/">Política de Privacidade</a>.</p>
+
+      <h3>Como apago meus dados?</h3>
+      <p>Exclua itens dentro do App ou desinstale-o para remover tudo do aparelho.</p>
+    </article>
+
+    <!-- ============================ ENGLISH ============================= -->
+    <article class="doc" data-lang="en">
+      <h1>Support</h1>
+      <p class="updated">Mush Remember · Schbits</p>
+      <p>Need help, found a bug or have an idea? We read everything.</p>
+
+      <div class="card">
+        <h3 style="margin-top:0">Get in touch</h3>
+        <p style="margin:0">Email: <a href="mailto:contato@schbits.com?subject=Mush%20Remember%20Support">contato@schbits.com</a><br/>
+        We usually reply within 2 business days.</p>
+      </div>
+
+      <h2>Frequently asked questions</h2>
+
+      <h3>Is my data kept if I switch phones?</h3>
+      <p>Your data lives on your device. The App is local-first today, with no cloud sync yet, so switching devices won't migrate data automatically. Cloud sync is planned for the future.</p>
+
+      <h3>I'm not getting notifications.</h3>
+      <p>Check that notifications for Mush Remember are enabled in your system settings. On some Android phones, battery savers can delay reminders — allowing the App to run in the background fixes it.</p>
+
+      <h3>Why do some plans show the weather?</h3>
+      <p>Weather appears only when a plan involves leaving home and you filled in a <b>location</b>. The forecast comes from Open-Meteo using the place name — never your device GPS.</p>
+
+      <h3>Is the App free? Are there ads?</h3>
+      <p>No ads and no tracking. See the <a href="/mushremember/privacy/">Privacy Policy</a>.</p>
+
+      <h3>How do I delete my data?</h3>
+      <p>Delete items inside the App, or uninstall it to remove everything from your device.</p>
+    </article>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <span>© <span id="yr"></span> Schbits · Mush Remember</span>
+      <nav>
+        <a href="/"><span data-lang="pt">Início</span><span data-lang="en">Home</span></a>
+        <a href="/mushremember/"><span data-lang="pt">O app</span><span data-lang="en">The app</span></a>
+        <a href="/mushremember/privacy/"><span data-lang="pt">Privacidade</span><span data-lang="en">Privacy</span></a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+  <script src="/assets/i18n.js"></script>
+</body>
+</html>
