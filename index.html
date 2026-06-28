@@ -5,6 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Schbits — Apps that take care of your day</title>
   <meta name="description" content="Schbits is an independent mobile app studio. We craft calm, privacy-first apps for Android and iOS. Meet Mush Remember." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://schbits.com/" />
+  <meta property="og:title" content="Schbits — Apps that take care of your day" />
+  <meta property="og:description" content="An independent mobile app studio crafting calm, privacy-first apps for Android and iOS. Meet Mush Remember." />
+  <meta property="og:image" content="https://schbits.com/assets/mushremember-icon.png" />
+  <meta name="twitter:card" content="summary" />
   <link rel="icon" type="image/png" href="/assets/mushremember-icon.png" />
   <!-- fixa o idioma antes da pintura (sem flash do idioma inativo) -->
   <script>document.documentElement.setAttribute('data-active',(localStorage.getItem('lang')||((navigator.language||'en').toLowerCase().indexOf('pt')===0?'pt':'en')));</script>
@@ -34,7 +40,7 @@
 
   <!-- ------------------------------- Hero -------------------------------- -->
   <section style="padding-top:84px;padding-bottom:40px">
-    <div class="wrap" style="display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center">
+    <div class="wrap hero-home">
       <div>
         <span class="eyebrow" data-lang="pt">Estúdio de apps</span>
         <span class="eyebrow" data-lang="en">Independent app studio</span>
@@ -44,7 +50,7 @@
         </h1>
         <p class="lead" data-lang="pt">A Schbits cria apps calmos e <b>privacidade em primeiro lugar</b> para Android e iOS. Nada de ruído, nada de complicação — só software que ajuda de verdade.</p>
         <p class="lead" data-lang="en">Schbits builds calm, <b>privacy-first</b> apps for Android and iOS. No noise, no clutter — just software that genuinely helps.</p>
-        <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:28px">
+        <div class="hero-cta" style="display:flex;gap:14px;flex-wrap:wrap;margin-top:28px">
           <a class="btn btn-primary" href="/mushremember/">
             <span data-lang="pt">Conheça o Mush Remember</span>
             <span data-lang="en">Meet Mush Remember</span>
@@ -55,7 +61,7 @@
           </a>
         </div>
       </div>
-      <div style="display:grid;place-items:center">
+      <div class="hero-art">
         <div style="position:relative">
           <div style="position:absolute;inset:-8% -8%;background:radial-gradient(circle at 50% 40%, color-mix(in srgb,var(--accent) 28%,transparent), transparent 70%);filter:blur(10px)"></div>
           <img src="/assets/cogu.png" alt="Cogu, mascote do Mush Remember"
